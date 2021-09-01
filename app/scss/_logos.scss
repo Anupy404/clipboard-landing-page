@@ -1,0 +1,26 @@
+.logos {
+	&__container {
+		@include breakpoint-up(large) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.logo {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 0px 29px;
+			&:not(:last-child) {
+				margin-bottom: 60px;
+				@include breakpoint-up(large) {
+					margin-bottom: 0px;
+				}
+			}
+
+			> img {
+			}
+		}
+	}
+}

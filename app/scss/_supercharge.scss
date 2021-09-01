@@ -1,0 +1,42 @@
+/*using  css flex box
+
+.supercharge {
+	&__columns {
+		@include breakpoint-up(large) {
+			display: flex;
+		}
+	}
+
+	&__column {
+		flex: 1;
+	}
+}
+
+*/
+
+//using css grid
+
+.supercharge {
+	&__columns {
+		@include breakpoint-up(large) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 50px;
+		}
+	}
+
+	&__column {
+		margin-bottom: 62px;
+	}
+
+	&__icon {
+		height: 47px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		@include breakpoint-up(large) {
+			margin-bottom: 47px;
+		}
+	}
+}

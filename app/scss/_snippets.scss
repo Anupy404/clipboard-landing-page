@@ -1,0 +1,51 @@
+.snippets {
+	&__content {
+		position: relative;
+		width: 100%;
+		@include breakpoint-up(large) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__image,
+	&__features {
+		@include breakpoint-up(large) {
+			flex: 1;
+		}
+	}
+
+	&__image {
+		margin-bottom: 62px;
+		@include breakpoint-up(large) {
+			margin-bottom: 0px;
+		}
+
+		img {
+			width: 100%;
+			max-width: 500px;
+			@include breakpoint-up(large) {
+				transform: translateX(-53px);
+				max-width: none;
+			}
+		}
+	}
+
+	&__features {
+		text-align: center;
+		@include breakpoint-up(large) {
+			display: flex;
+			flex-direction: column;
+			margin-left: 53px;
+			text-align: left;
+
+			p {
+				margin-bottom: 60px;
+
+				@include breakpoint-up(large) {
+					margin-bottom: 50px;
+					max-width: 341px;
+				}
+			}
+		}
+	}
+}
